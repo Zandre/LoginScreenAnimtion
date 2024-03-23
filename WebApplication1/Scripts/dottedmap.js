@@ -70,7 +70,7 @@ var init = function () {
 	camera.lookAt(centerVector);
 	scene.add(camera);
 
-	texture = THREE.ImageUtils.loadTexture('../Content/netherlands_provinces.png', undefined, function () {
+	texture = THREE.ImageUtils.loadTexture('../Content/nl_outline.png', undefined, function () {
 		imagedata = getImageData(texture.image);
 		drawTheMap();
 	});
@@ -106,7 +106,7 @@ var render = function (a) {
 	}
 
 	particles.geometry.verticesNeedUpdate = true;
-	/*camera.position.x = Math.sin(a / 5000) * 100;*/ // creates the swing effect I think
+	camera.position.x = Math.sin(a / 5000) * 600; // creates the swing effect I think
 	camera.lookAt(centerVector);
 
 	renderer.render(scene, camera);
