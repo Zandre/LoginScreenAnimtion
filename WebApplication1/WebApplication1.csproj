@@ -134,6 +134,7 @@
     <Content Include="Content\flow.css" />
     <Content Include="Content\map.jpg" />
     <Content Include="Content\meisje.jpg" />
+    <Content Include="Content\netherlands_provinces.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -141,6 +142,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\dottedmap.js" />
     <Content Include="Scripts\flow.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
