@@ -1,7 +1,7 @@
 ﻿var renderer, scene, camera, ww, wh, particles;
 
 ww = window.innerWidth,
-	wh = window.innerHeight;
+wh = window.innerHeight;
 
 var centerVector = new THREE.Vector3(0, 0, 0);
 var previousTime = 0;
@@ -22,8 +22,8 @@ var drawTheMap = function () {
 
 	var geometry = new THREE.Geometry();
 	var material = new THREE.PointsMaterial({
-		size: 3,
-		color: 0x313742,
+		size: 4,  // size of the dot
+		color: 0xd4af37, // color of the dot
 		sizeAttenuation: false
 	});
 	for (var y = 0, y2 = imagedata.height; y < y2; y += 2) {
@@ -60,8 +60,8 @@ var init = function () {
 		canvas: document.getElementById("map"),
 		antialias: true
 	});
-	renderer.setSize(ww, wh);
-	renderer.setClearColor(0x1d1f23);
+	renderer.setSize(ww, wh); // size of the canvas
+	renderer.setClearColor(0x1d1f23); // background color of the map
 
 	scene = new THREE.Scene();
 
@@ -106,7 +106,7 @@ var render = function (a) {
 	}
 
 	particles.geometry.verticesNeedUpdate = true;
-	camera.position.x = Math.sin(a / 5000) * 100;
+	/*camera.position.x = Math.sin(a / 5000) * 100;*/ // creates the swing effect I think
 	camera.lookAt(centerVector);
 
 	renderer.render(scene, camera);
