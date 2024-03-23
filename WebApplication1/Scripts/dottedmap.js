@@ -22,7 +22,7 @@ var drawTheMap = function () {
 
 	var geometry = new THREE.Geometry();
 	var material = new THREE.PointsMaterial({
-		size: 4,  // size of the dot
+		size: 1.5,  // size of the dot
 		color: 0xd4af37, // color of the dot
 		sizeAttenuation: false
 	});
@@ -66,7 +66,7 @@ var init = function () {
 	scene = new THREE.Scene();
 
 	camera = new THREE.PerspectiveCamera(50, ww / wh, 0.1, 10000);
-	camera.position.set(-100, 0, 220);
+	camera.position.set(0, 0, 900); // position of the camera on the x;y;z planes
 	camera.lookAt(centerVector);
 	scene.add(camera);
 
